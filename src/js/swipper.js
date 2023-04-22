@@ -8,8 +8,8 @@ window.addEventListener("scroll", () => {
   const viewportHeight = window.innerHeight;
 
   if (boxPosition < viewportHeight / 2 || secondPosition < viewportHeight / 2) {
-    box.classList.add("slide-out-right");
-    boxSecond.classList.add("slide-out-left");
+    box.classList.add("slide-out-right") ||
+      boxSecond.classList.add("slide-out-left");
   } else {
     box.classList.remove("slide-out-right");
     boxSecond.classList.remove("slide-out-left");
@@ -25,11 +25,10 @@ const swiper = new Swiper(".mySwiper", {
   spaceBetween: 100,
   loop: true,
 
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    // el: '.swiper-scrollbar',
-    // draggable: true,
-  },
+  // scrollbar: {
+  //   el: ".swiper-scrollbar",
+
+  // },
 
   navigation: {
     nextEl: ".swiper-button-next",
