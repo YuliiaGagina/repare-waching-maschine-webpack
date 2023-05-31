@@ -35,3 +35,12 @@ const swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+const titles = document.querySelectorAll(".title");
+
+titles.forEach((title) => {
+  title.addEventListener("click", () => {
+    const info = title.nextElementSibling;
+    info.classList.toggle("show-info");
+  });
+});
